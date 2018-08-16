@@ -6,6 +6,17 @@
 //s
 
 
+
+
+let elStore1 = document.getElementById('Store1');
+let elStore2 = document.getElementById('Store2');
+let elStore3 = document.getElementById('Store3');
+
+
+let elBody = document.getElementById('body');
+let elStoreTitle = document.getElementById('Store-Title')
+
+
 let Store1 ={
     name: 'Chocolate Droppa',
     type: ['Mint', 'Peanut Butter', 'Macadamia Nut'],
@@ -15,7 +26,7 @@ let Store1 ={
     avgCookie:3,
     openTime:0900,
     closeTime:1800,
-}
+};
 
 let Store2={
     name: 'Raider\'s Rocky Raisin Rocket',
@@ -26,7 +37,7 @@ let Store2={
     avgCookie: 10.3,
     openTime: 0800,
     closeTime: 2100,
-}
+};
 
 let Store3={
     name: 'DC Bakery',
@@ -37,4 +48,17 @@ let Store3={
     avgCookie:20,
     openTime:0800,
     closeTime:1500,
-}
+};
+let storeArray = [Store1,Store2,Store3];
+
+function displayStoreTitle() {
+    for (let i = 0; i < storeArray.length; i++) {
+    let elStoreTitle = document.createElement('h2');
+    elStoreTitle.setAttribute('class','Store-title');
+    elBody.appendChild(elStoreTitle);
+    elStoreTitle.innerHTML = storeArray[i].name;
+        };
+}; 
+
+
+displayStoreTitle();
