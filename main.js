@@ -14,7 +14,20 @@ let elStore3 = document.getElementById('Store3');
 
 
 let elBody = document.getElementById('body');
-let elStoreTitle = document.getElementById('Store-Title')
+let elStoreTitle = document.getElementById('Store-Title');
+let storeArray = [];
+let Store = function(nameofStore,locationOfStore, typeOfCookiesSoldAtStore, minimumNumberOfCustomers,
+    maximumNumberOfCustomers,averageCookiesSoldPerDay,openTimeForStore,closeTimeForStore){
+    this.name = nameofStore
+    this.location = locationOfStore
+    this.type = typeOfCookiesSoldAtStore
+    this.minCust = minimumNumberOfCustomers
+    this.maxCust = maximumNumberOfCustomers
+    this.avgCookie = averageCookiesSoldPerDay
+    this.openTime = openTimeForStore
+    this.closeTime = closeTimeForStore
+};
+    
 
 
 let Store1 ={
@@ -24,9 +37,10 @@ let Store1 ={
     minCust:5,
     maxCust:100,
     avgCookie:3,
-    openTime:0900,
-    closeTime:1800,
+    openTime:9,
+    closeTime:18,
 };
+
 
 let Store2={
     name: 'Raider\'s Rocky Raisin Rocket',
@@ -35,8 +49,8 @@ let Store2={
     minCust:10,
     maxCust: 150,
     avgCookie: 10.3,
-    openTime: 0800,
-    closeTime: 2100,
+    openTime: 8,
+    closeTime: 21,
 };
 
 let Store3={
@@ -46,10 +60,13 @@ let Store3={
     minCust:2,
     maxCust: 200,
     avgCookie:20,
-    openTime:0800,
-    closeTime:1500,
+    openTime:8,
+    closeTime:15,
 };
-let storeArray = [Store1,Store2,Store3];
+
+let Store4 = new Store ('Willy Cronka\'s', 'Booga Suga', 'Gaithersburg', 1, 100, 25, 10, 21)
+
+storeArray.push(Store1,Store2,Store3,Store4);
 
 function displayStoreTitle() {
     for (let i = 0; i < storeArray.length; i++) {
@@ -59,6 +76,13 @@ function displayStoreTitle() {
     elStoreTitle.innerHTML = storeArray[i].name;
         };
 }; 
+
+
+
+
+
+
+
 
 
 displayStoreTitle();
