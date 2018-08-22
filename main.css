@@ -1,0 +1,22 @@
+@font-face:{
+
+}
+
+.h1{
+
+
+}
+
+
+.store-table{
+    border: 2px;
+    background-color: black;
+}
+
+td{
+    border: 1px solid;
+}
+
+th{
+    border: 2px solid;
+}

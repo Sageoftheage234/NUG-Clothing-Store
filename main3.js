@@ -26,6 +26,24 @@ let Store4 = new Store ('Willy Cronka\'s','Gaithersburg', ['Booga Suga','Mama\'s
 storeArray.push(Store1,Store2,Store3,Store4);
 
 
+
+function displayStoreName() {
+    let elRow = document.createElement('tr');
+    elStoreTable.appendChild(elRow);
+    
+    let elNameHeader = document.createElement('th');
+    elRow.appendChild(elNameHeader);
+    elNameHeader.innerHTML = 'Name of Store'
+    
+    for(let i = store.name; i < storeArray[i].name ; i++){
+            let elTableHeader = document.createElement('th');
+            elRow.appendChild(elTableHeader);
+            console.log('string', elNameHeader.innerHTML)
+    };
+};
+
+
+
 let  displayTotalCookiesSoldPerHour= function(store){
     let elRow = document.createElement('tr');
     elStoreTable.appendChild(elRow);
@@ -45,18 +63,6 @@ function populateTable(){
     };
 };
 
-function displayStoreName() {
-    let elRow = document.createElement('tr');
-    elTable.appendChild(elRow);
-    let elNameHeader = document.createElement('th');
-    elRow.appendChild(elNameHeader);
-    elNameHeader.innerHTML = 'Name of Store'
-    for(let i = 8; i < 21 ; i++){
-        displayStoreName(StoreArray[i]);
-            let elTableHeader = document.createElement('th');
-            elRow.appendChild(elTableHeader);
-    };
-};
 
 
 
@@ -66,4 +72,4 @@ function displayStoreName() {
 
 
 populateTable();
-
+displayStoreName();
