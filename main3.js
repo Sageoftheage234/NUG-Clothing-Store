@@ -66,21 +66,30 @@ let  displayTotalCookiesSoldPerHour= function(store){
         };
     let elTotalStoreTableData = document.createElement('th');
     elRow.appendChild(elTotalStoreTableData);
-    elTotalStoreTableData.innerHTML = store.avgCookie;
+    elTotalStoreTableData.innerHTML = store.totalCookiesPerDay;
     
 };
+
+function displayFooter(){
+
+    
+}
+
+
+
+
+
 let storeName = elForm.storeName;
+//let CookiesPerFlavor = elForm. //
+
+
 
 function createNewStore(event){
     event.preventDefault();
     let newStore = new Store(storeName.value, 10, 50,30,8,21)
     console.log(newStore);
     displayTotalCookiesSoldPerHour(newStore);
-
-}
-
-
-
+};
 
 elForm.addEventListener('submit', createNewStore);
 
