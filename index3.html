@@ -9,11 +9,20 @@
    
 </head>
 <body>
-    <table id='Store-Table'> </table> </table>
-    <h1> Create New School </h1>
+    <h1> Pat's Cookies</h1>
+    <table id='Store-Table'> </table>
+    <h1> Create New Store </h1>
     <form id = 'Store-form'>
         <h3> Store Name</h3>
-        <input name = 'storeName'></input>
+        <input name = 'storeName'>
+   
+        <h3> Minimum Customers </h3>
+        <input required type ='number' name = 'customerMin'>
+        <h3>Maximum Customers</h3>
+        <input required type ='number' name = 'customerMax'> 
+        <h3># Cookies Per Hour</h3>
+        <input required type = 'number' name ='cookiesPerCustomer'>
+
         <button id ='submitButton' type='submit'>Submit</button>
     </form>
 </body>
